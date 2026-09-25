@@ -1,0 +1,43 @@
+{
+  "round": 1,
+  "model": "yolov8n fine-tune vong 1..1",
+  "base_model": "yolov8n.pt",
+  "n_train_images": 12,
+  "n_train_boxes": 300,
+  "epochs": 50,
+  "imgsz": 960,
+  "strategies": [
+    "uncertainty"
+  ],
+  "test": {
+    "images": 20,
+    "ref_boxes": 403,
+    "ref_ignored_tiny": 14,
+    "ap50": 0.7188,
+    "conf_thr": 0.25,
+    "tp": 55,
+    "fp": 0,
+    "fn": 348,
+    "precision": 1.0,
+    "recall": 0.1365,
+    "f1": 0.2402,
+    "recall_by_size": {
+      "small": {
+        "recall": 0.0,
+        "ref_boxes": 66
+      },
+      "medium": {
+        "recall": 0.1385,
+        "ref_boxes": 296
+      },
+      "large": {
+        "recall": 0.3415,
+        "ref_boxes": 41
+      }
+    }
+  },
+  "reference": "data/test/labels",
+  "runtime": "NVIDIA GeForce GTX 1650",
+  "student": "Trịnh Quang Trung - 2A202602096",
+  "created": "2026-09-25T09:43:26"
+}
